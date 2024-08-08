@@ -10,32 +10,34 @@ I like using Ubuntu for this because it's free and lightweight, allowing you to 
 > sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 6. Install X, which is needed to run a GUI
 > sudo apt install xinit
-7. Install appspace app
+7. Disable blank screen
+> gsettings set org.gnome.desktop.session idle-delay 0
+8. Install appspace app
 > sudo snap install appspace-app
-8. Enable appspace to run at the start of X
+9. Enable appspace to run at the start of X
 > nano ~\.xinitrc
-9. Enter the following line
+10. Enter the following line
 > appspace-app
 * Save and exit the file using CTL-X -> Y -> ENTER
-10. Configure autologin
+11. Configure autologin
 > sudo mkdir /etc/systemd/system/getty@tty1.service.d
-11. Create and edit the override.conf file
+12. Create and edit the override.conf file
 > sudo nano /etc/systemd/system/getty@tty1.service.d/override.conf
-12. Add the following lines <br>
+13. Add the following lines <br>
 Replace *yourusername* with the current logged in user
 > [Service]<br>
 > Type=simple<br>
 > ExecStart=<br>
 > ExecStart=-/sbin/agetty --autologin *yourusername* --noclear %I 38400 linux<br>
 * Save and exit the file using CTL-X -> Y -> ENTER
-13. Auto launch Startx
+14. Auto launch Startx
 > nano ~/.profile
-14. Add the following lines to the end of the file
+15. Add the following lines to the end of the file
 > #Startx Automatically<br>
 > if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then<br>
 > . startx<br>
 > logout<br>
 > fi<br>
 * Save and exit the file using CTL-X -> Y -> ENTER
-15. Reboot the System
+16. Reboot the System
 > Sudo reboot
