@@ -1,5 +1,6 @@
 # AppSpace on Ubuntu
-I like using Ubuntu for this because it's free and lightweight, allowing you to run AppSpace on almost any hardware that support Ubuntu.  I tried this on a RaspberryPi 4, it didn't work too well, not enough resources availalbe. This was tested using Ubuntu Server 24.04 LTS
+I like using Ubuntu for this because it's free and lightweight, allowing you to run AppSpace on almost any hardware that support Ubuntu.  I tried this on a RaspberryPi 4, it didn't work too well, not enough resources availalbe. This was tested using Ubuntu Server 24.04 LTS.<br>
+Special thanks to [@hotwire49]https://github.com/hotwire49 for his help on this as well
 1. Install Ubuntu Server as you normally would.  It's not super complex.
 2. Login whit the username you created during setup
 3. Update the System
