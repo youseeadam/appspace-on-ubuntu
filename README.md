@@ -16,7 +16,7 @@ I like using Ubuntu for this because it's free and lightweight, allowing you to 
 8. Install appspace app
 > sudo snap install appspace-app
 9. Enable appspace to run at the start of X
-> nano /home/appspace/.xinitrc
+> sudo nano /home/appspace/.xinitrc
 10. Enter the following line
 > appspace-app
 * Save and exit the file using CTL-X -> Y -> ENTER
@@ -31,7 +31,7 @@ I like using Ubuntu for this because it's free and lightweight, allowing you to 
 > ExecStart=-/sbin/agetty --autologin AppSpaceUser--noclear %I 38400 linux<br>
 * Save and exit the file using CTL-X -> Y -> ENTER
 14. Auto launch Startx
-> nano /home/appspace/.profile
+> sudo nano /home/appspace/.profile
 15. Add the following lines to the end of the file
 > #Startx Automatically<br>
 > if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then<br>
