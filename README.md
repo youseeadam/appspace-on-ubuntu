@@ -5,7 +5,7 @@ I like using Ubuntu for this because it's free and lightweight, allowing you to 
 3. Update the System
 > Sudo apt update<br>
 > Sudo apt upgrade
-4.Create a new user, this will be used to login to the system automatcially and launch appspace-app
+4. Create a new user, this will be used to login to the system automatcially and launch appspace-app
 > sudo adduser appspace
 5. Disable hibernation/sleep of the system
 > sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
